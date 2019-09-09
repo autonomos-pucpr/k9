@@ -190,7 +190,6 @@ if __name__ == "__main__":
 
    while (time.time() - start) < RUN_TIME:
 
-      time.sleep(SAMPLE_TIME)
 
       ## signal information from input pins ##
       ## first pin (4) ## 
@@ -208,22 +207,22 @@ if __name__ == "__main__":
 	      
       pi.write(25, 1)
       ## second pin (5) ## 
-      #f2 = p2.frequency()
-      #pw2 = p2.pulse_width()
-      #dc2 = p2.duty_cycle()
+      f2 = p2.frequency()
+      pw2 = p2.pulse_width()
+      dc2 = p2.duty_cycle()
       ###################
       #################################################
       ## setting signal information for the output pins ##
       ## first pin (21) ##  
       set_dc(0, pw1)
       ## first pin (22) ##  
-      #set_dc(1, pw2)
+      set_dc(1, pw2)
       ####################
       ####################################################
       print("f1={:.1f} pw1={} dc1={:.2f}".format(f1, int(pw1+0.5), dc1))
       print("##########################################################")
-      #print("f2={:.1f} pw2={} dc2={:.2f}".format(f2, int(pw2+0.5), dc2))
-      #print("##########################################################")
+      print("f2={:.1f} pw2={} dc2={:.2f}".format(f2, int(pw2+0.5), dc2))
+      print("##########################################################")
 
    pi.wave_tx_stop()
 
