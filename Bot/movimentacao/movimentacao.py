@@ -9,6 +9,7 @@ from leitura_pwm import reader
 # Public Domain
 
 """
+teste
 This script shows how to use waves to generate PWM with a
 set frequency on any spare GPIO.
 
